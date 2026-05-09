@@ -16,20 +16,31 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('PAL-Background_1600x900.png') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #121212; 
             font-family: 'Inter', sans-serif;
             color: #ffffff;
             line-height: 1.6;
+        }
+
+        .background-image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('PAL-Background_1600x900.png') no-repeat center center;
+            background-size: cover;
+            z-index: -2;
+            will-change: transform; 
         }
 
         .background-overlay {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6); 
             z-index: -1;
         }
 
@@ -88,7 +99,6 @@
             padding-bottom: 0.75rem;
         }
 
-        /* Flexbox ensures the cards stay centered for perfect symmetry */
         .grid {
             display: flex;
             flex-wrap: wrap;
@@ -101,11 +111,11 @@
             border: 1px solid var(--border-glow);
             padding: 2rem;
             border-radius: 4px;
-            flex: 1 1 300px; /* Base width of 300px */
-            max-width: 400px; /* Prevents cards from becoming too wide on large screens */
+            flex: 1 1 300px; 
+            max-width: 400px; 
             transition: transform 0.3s ease;
             box-sizing: border-box;
-            text-align: left; /* Keeps text professional while card container is centered */
+            text-align: left; 
         }
 
         .card:hover {
@@ -173,6 +183,7 @@
     </style>
 </head>
 <body>
+    <div class="background-image-container"></div>
     <div class="background-overlay"></div>
     
     <main class="container">
@@ -208,6 +219,16 @@
                 <h3>Operational Security</h3>
                 <p>Audit and implementation of privacy-first protocols, ensuring institutional knowledge, custom IP, and critical assets remain shielded from external threats.</p>
             </div>
+            
+            <div class="card">
+                <h3>Asset & Workflow Digitization</h3>
+                <p>Deployment of localized Computerized Maintenance Management Systems (CMMS). We architect custom database structures to track preventative maintenance, inventory, and automated facility ticketing.</p>
+            </div>
+
+            <div class="card">
+                <h3>Environmental Resource Tracking</h3>
+                <p>Integrating granular sensor arrays to monitor HVAC load, water reclamation efficiency, and utility consumption. We transform raw facility data into actionable, real-time logic dashboards.</p>
+            </div>
         </section>
 
         <h2 class="service-category-title">Residential & Prosumer IT</h2>
@@ -230,6 +251,16 @@
             <div class="card">
                 <h3>Digital Privacy & Governance</h3>
                 <p>Network-wide content filtering, local media server deployment, and comprehensive security audits to protect sensitive household data from the public web.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Campus-Wide Wireless Bridging</h3>
+                <p>Extending robust network coverage to detached workshops, barns, and outbuildings. We utilize point-to-point wireless uplinks and buried low-voltage drops to create a unified property network.</p>
+            </div>
+
+            <div class="card">
+                <h3>High-Availability Workspaces</h3>
+                <p>Enterprise-grade infrastructure for remote professionals. We deploy automated internet failover logic, dedicated hardware firewalls, and isolated VLANs to ensure zero downtime and strict data separation.</p>
             </div>
         </section>
 
